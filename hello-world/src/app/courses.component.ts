@@ -14,12 +14,19 @@ import { CoursesService } from './courses.service';
         </ul>
         <img src="{{ imageUrl }}" />
         <img [src]="imageUrl" />
+        <table>
+            <tr>
+                <td [attr.colspan]="colSpan"></td>
+            </tr>
+        </table>
+        <button class="btn btn-primary">Save</button>
         ` 
 })
 
 export class CoursesComponent {
     title = "Lista de cursos";
     imageUrl = "http://lorempixel.com/400/200";
+    colSpan = 2;
     courses;
 
     constructor(service: CoursesService) {
